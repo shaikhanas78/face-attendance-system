@@ -1,0 +1,16 @@
+# Ignore training data and outputs — these are generated at runtime
+TrainingImage/
+TrainingImageLabel/
+Attendance/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore git
+.git/
+.gitignore
