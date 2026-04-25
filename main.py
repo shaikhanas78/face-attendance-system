@@ -1,4 +1,3 @@
-############################################# IMPORTING ################################################
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as mess
@@ -11,17 +10,15 @@ import pandas as pd
 import datetime
 import time
 import threading
-############################################# FUNCTIONS ################################################
 
-def assure_path_exists(path):
+def assure_path_exists(path):   # Creates directory if it does not exist
     dir = os.path.dirname(path)
     if not os.path.exists(dir):
         os.makedirs(dir)
 
 
-##################################################################################
 
-def fix_student_details():
+def fix_student_details(): # Remove duplicates and reassign serial numbers in StudentDetails.csv on every startup
     """Runs on startup - removes duplicate entries and reassigns clean serial numbers."""
     path = "StudentDetails/StudentDetails.csv"
     if not os.path.isfile(path):
@@ -45,21 +42,19 @@ def fix_student_details():
     except Exception as e:
         print(f"[Startup] Could not clean StudentDetails: {e}")
 
-##################################################################################
 
-def tick():
+def tick(): 
     time_string = time.strftime('%H:%M:%S')
     clock.config(text=time_string)
     clock.after(200,tick)
 
-###################################################################################
 
-def contact():
+def contact(): 
     mess._show(title='Contact us', message="Please contact us on : 'xxxxxxxxxxxxx@gmail.com' ")
 
-###################################################################################
 
-def check_haarcascadefile():
+
+def check_haarcascadefile(): # Check if haarcascade_frontalface_default.xml file exists
     exists = os.path.isfile("haarcascade_frontalface_default.xml")
     if exists:
         pass
