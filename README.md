@@ -152,6 +152,4 @@ docker run -it face-attendance-system
 
 ## Developer
 
-**Sayyan Khan**  
-MCA — SEM IV  
-DevOps Project
+**Anas Shaikh**
